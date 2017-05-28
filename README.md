@@ -20,10 +20,10 @@ pip install tapsaff
 TapsAff(location)
 ```
 
-### Methods
+### Properties
 
 ```python
-is_taps_aff() # Returns True if taps aff for this location
+is_taps_aff # True if taps aff for this location
 ```
 
 ## Example
@@ -32,5 +32,5 @@ is_taps_aff() # Returns True if taps aff for this location
 from tapsaff import TapsAff
 
 glasgow = TapsAff("Glasgow")
-print(glasgow.is_taps_aff())
+print(glasgow.is_taps_aff)
 ```

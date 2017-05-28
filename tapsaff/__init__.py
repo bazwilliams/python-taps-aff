@@ -12,10 +12,11 @@ class TapsAff(object):
 
         self.location = location
 
+    @property
     def is_taps_aff(self):
         """Returns True if taps aff for this location"""
 
-        request = requests.get('http://www.taps-aff.co.uk/?location=%s?api' % self.location)
+        request = requests.get('http://www.taps-aff.co.uk/%s?api' % self.location)
         if request.status_code == 200:
             taps = request.json()['taps']
             if taps == 'aff':
