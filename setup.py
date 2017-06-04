@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='tapsaff',
     packages=['tapsaff'],
-    version='0.1.1',
+    version='0.1.2',
     description='Provides an API for requesting information from taps-aff.co.uk',
     author='Barry John Williams',
     author_email='barry@bjw.me.uk',

@@ -27,8 +27,6 @@ class TapsAff(object):
                 else:
                     raise RuntimeError("Unexpected taps value: %s" % taps)
             except ValueError:
-                print(request.text)
                 raise RuntimeError("Unexpected response from service")
         else:
-            print(request.text)
             raise IOError("Failure downloading from Api")
