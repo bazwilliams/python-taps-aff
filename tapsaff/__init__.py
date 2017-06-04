@@ -18,13 +18,17 @@ class TapsAff(object):
 
         request = requests.get('http://www.taps-aff.co.uk/%s?api' % self.location)
         if request.status_code == 200:
-            taps = request.json()['taps']
-            if taps == 'aff':
-                return True
-            elif taps == 'oan':
-                return False
-            else:
-                raise RuntimeError("Unexpected taps value: %s" % taps)
+            try:
+                taps = request.json()['taps']
+                if taps == 'aff':
+                    return True
+                elif taps == 'oan':
+                    return False
+                else:
+                    raise RuntimeError("Unexpected taps value: %s" % taps)
+            except ValueError:
+                print(request.text)
+                raise RuntimeError("Unexpected response from service")
         else:
             print(request.text)
             raise IOError("Failure downloading from Api")
