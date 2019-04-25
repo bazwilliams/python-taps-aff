@@ -16,7 +16,7 @@ class TapsAff(object):
     def is_taps_aff(self):
         """Returns True if taps aff for this location"""
 
-        request = requests.get('http://www.taps-aff.co.uk/api/%s' % self.location)
+        request = requests.get('https://www.taps-aff.co.uk/api/%s' % self.location)
         if request.status_code == 200:
             try:
                 taps = request.json()['taps']['status']
