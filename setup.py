@@ -11,5 +11,7 @@ setup(
     download_url='https://github.com/bazwilliams/python-taps-aff/tarball/0.2.0',
     keywords=['weather', 'glasgow', 'uk', 'clothes', 'top', 'taps', 'aff', 'oan'],
     install_requires=['requests'],
-    classifiers=[],
+    classifiers=[
+        'License :: OSI Approved :: MIT License'
+    ],
 )
